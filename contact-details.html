@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me - Nilesh Maurya</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #1a252f, #2c3e50);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+        }
+
+        .contact-container {
+            max-width: 600px;
+            width: 100%;
+        }
+
+        .contact-title {
+            color: white;
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .contact-grid {
+            display: grid;
+            gap: 1.5rem;
+        }
+
+        .contact-card {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .contact-card:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.15);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .contact-link {
+            display: flex;
+            align-items: center;
+            padding: 1.5rem;
+            color: white;
+            text-decoration: none;
+            gap: 1.5rem;
+        }
+
+        .contact-icon {
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            font-size: 1.5rem;
+            transition: transform 0.3s ease;
+        }
+
+        .contact-card:hover .contact-icon {
+            transform: rotate(360deg);
+        }
+
+        .contact-info {
+            flex-grow: 1;
+        }
+
+        .contact-platform {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+        }
+
+        .contact-handle {
+            color: #bdc3c7;
+            font-size: 0.9rem;
+        }
+
+        .arrow {
+            font-size: 1.2rem;
+            opacity: 0;
+            transform: translateX(-20px);
+            transition: all 0.3s ease;
+        }
+
+        .contact-card:hover .arrow {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        /* Platform-specific colors */
+        .whatsapp .contact-icon { background: #25D366; }
+        .linkedin .contact-icon { background: #0077B5; }
+        .github .contact-icon { background: #333; }
+        .instagram .contact-icon { background: #E4405F; }
+        .twitter .contact-icon { background: #1DA1F2; }
+
+        .back-button {
+            position: fixed;
+            top: 2rem;
+            left: 2rem;
+            color: white;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 1.1rem;
+            opacity: 0.8;
+            transition: opacity 0.3s ease;
+        }
+
+        .back-button:hover {
+            opacity: 1;
+        }
+
+        @media (max-width: 768px) {
+            .contact-title {
+                font-size: 2rem;
+            }
+
+            .contact-link {
+                padding: 1rem;
+            }
+
+            .back-button {
+                top: 1rem;
+                left: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a href="index.html" class="back-button">
+        <i class="fas fa-arrow-left"></i>
+        Back to Portfolio
+    </a>
+
+    <div class="contact-container">
+        <h1 class="contact-title">Connect With Me</h1>
+        <div class="contact-grid">
+            <div class="contact-card whatsapp">
+                <a href="https://wa.me/918303937878" class="contact-link" target="_blank">
+                    <div class="contact-icon">
+                        <i class="fab fa-whatsapp"></i>
+                    </div>
+                    <div class="contact-info">
+                        <div class="contact-platform">WhatsApp</div>
+                        <div class="contact-handle">+91 8303937878</div>
+                    </div>
+                    <div class="arrow">→</div>
+                </a>
+            </div>
+
+            <div class="contact-card linkedin">
+                <a href="https://www.linkedin.com/in/yourusername" class="contact-link" target="_blank">
+                    <div class="contact-icon">
+                        <i class="fab fa-linkedin-in"></i>
+                    </div>
+                    <div class="contact-info">
+                        <div class="contact-platform">LinkedIn</div>
+                        <div class="contact-handle">Nilesh Maurya</div>
+                    </div>
+                    <div class="arrow">→</div>
+                </a>
+            </div>
+
+            <div class="contact-card github">
+                <a href="https://github.com/yourusername" class="contact-link" target="_blank">
+                    <div class="contact-icon">
+                        <i class="fab fa-github"></i>
+                    </div>
+                    <div class="contact-info">
+                        <div class="contact-platform">GitHub</div>
+                        <div class="contact-handle">@nileshmaurya</div>
+                    </div>
+                    <div class="arrow">→</div>
+                </a>
+            </div>
+
+            <div class="contact-card instagram">
+                <a href="https://instagram.com/yourusername" class="contact-link" target="_blank">
+                    <div class="contact-icon">
+                        <i class="fab fa-instagram"></i>
+                    </div>
+                    <div class="contact-info">
+                        <div class="contact-platform">Instagram</div>
+                        <div class="contact-handle">@nileshmaurya</div>
+                    </div>
+                    <div class="arrow">→</div>
+                </a>
+            </div>
+
+            <div class="contact-card twitter">
+                <a href="https://twitter.com/yourusername" class="contact-link" target="_blank">
+                    <div class="contact-icon">
+                        <i class="fab fa-twitter"></i>
+                    </div>
+                    <div class="contact-info">
+                        <div class="contact-platform">Twitter</div>
+                        <div class="contact-handle">@nileshmaurya</div>
+                    </div>
+                    <div class="arrow">→</div>
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
